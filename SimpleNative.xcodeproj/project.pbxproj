@@ -14,6 +14,8 @@
 		04C252EB1CB2957800600DD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C252E91CB2957800600DD8 /* LaunchScreen.storyboard */; };
 		04C252F61CB2957800600DD8 /* SimpleNativeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C252F51CB2957800600DD8 /* SimpleNativeTests.swift */; };
 		04C253011CB2957900600DD8 /* SimpleNativeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C253001CB2957900600DD8 /* SimpleNativeUITests.swift */; };
+		04C253131CB2A2A100600DD8 /* ReactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C253121CB2A2A100600DD8 /* ReactView.swift */; };
+		38A6E2A7D088FE0BE7DD81B2 /* libPods-SimpleNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 624B37E93144A62FA84B1BD9 /* libPods-SimpleNative.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,11 @@
 		04C252FC1CB2957900600DD8 /* SimpleNativeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleNativeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04C253001CB2957900600DD8 /* SimpleNativeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNativeUITests.swift; sourceTree = "<group>"; };
 		04C253021CB2957900600DD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04C2530E1CB2A27900600DD8 /* SimpleNative-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleNative-Bridging-Header.h"; sourceTree = "<group>"; };
+		04C253121CB2A2A100600DD8 /* ReactView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactView.swift; sourceTree = "<group>"; };
+		225DD02D308B59499E3F2121 /* Pods-SimpleNative.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleNative.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleNative/Pods-SimpleNative.debug.xcconfig"; sourceTree = "<group>"; };
+		624B37E93144A62FA84B1BD9 /* libPods-SimpleNative.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SimpleNative.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E062438845846946E97143C3 /* Pods-SimpleNative.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleNative.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleNative/Pods-SimpleNative.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38A6E2A7D088FE0BE7DD81B2 /* libPods-SimpleNative.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +89,8 @@
 				04C252F41CB2957800600DD8 /* SimpleNativeTests */,
 				04C252FF1CB2957900600DD8 /* SimpleNativeUITests */,
 				04C252DE1CB2957800600DD8 /* Products */,
+				F33F53A38161D1902E4ECA02 /* Pods */,
+				21D16AC2FD75D4EBA4ABCA06 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +113,8 @@
 				04C252E71CB2957800600DD8 /* Assets.xcassets */,
 				04C252E91CB2957800600DD8 /* LaunchScreen.storyboard */,
 				04C252EC1CB2957800600DD8 /* Info.plist */,
+				04C2530E1CB2A27900600DD8 /* SimpleNative-Bridging-Header.h */,
+				04C253121CB2A2A100600DD8 /* ReactView.swift */,
 			);
 			path = SimpleNative;
 			sourceTree = "<group>";
@@ -125,6 +137,23 @@
 			path = SimpleNativeUITests;
 			sourceTree = "<group>";
 		};
+		21D16AC2FD75D4EBA4ABCA06 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				624B37E93144A62FA84B1BD9 /* libPods-SimpleNative.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F33F53A38161D1902E4ECA02 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				225DD02D308B59499E3F2121 /* Pods-SimpleNative.debug.xcconfig */,
+				E062438845846946E97143C3 /* Pods-SimpleNative.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +161,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04C253051CB2957900600DD8 /* Build configuration list for PBXNativeTarget "SimpleNative" */;
 			buildPhases = (
+				7520AAF5ADE56FBC850DD0A2 /* Check Pods Manifest.lock */,
 				04C252D91CB2957800600DD8 /* Sources */,
 				04C252DA1CB2957800600DD8 /* Frameworks */,
 				04C252DB1CB2957800600DD8 /* Resources */,
+				3E592440DE2BD8E9C9BEDA05 /* Embed Pods Frameworks */,
+				DF4C3B94037C532C4C345A7C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -251,12 +283,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3E592440DE2BD8E9C9BEDA05 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleNative/Pods-SimpleNative-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7520AAF5ADE56FBC850DD0A2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DF4C3B94037C532C4C345A7C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleNative/Pods-SimpleNative-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		04C252D91CB2957800600DD8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				04C252E31CB2957800600DD8 /* ViewController.swift in Sources */,
+				04C253131CB2A2A100600DD8 /* ReactView.swift in Sources */,
 				04C252E11CB2957800600DD8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,23 +478,30 @@
 		};
 		04C253061CB2957900600DD8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 225DD02D308B59499E3F2121 /* Pods-SimpleNative.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SimpleNative/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tsusolo.SimpleNative;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SimpleNative/SimpleNative-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		04C253071CB2957900600DD8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E062438845846946E97143C3 /* Pods-SimpleNative.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SimpleNative/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tsusolo.SimpleNative;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SimpleNative/SimpleNative-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -482,6 +570,7 @@
 				04C253071CB2957900600DD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		04C253081CB2957900600DD8 /* Build configuration list for PBXNativeTarget "SimpleNativeTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +579,7 @@
 				04C2530A1CB2957900600DD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		04C2530B1CB2957900600DD8 /* Build configuration list for PBXNativeTarget "SimpleNativeUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +588,7 @@
 				04C2530D1CB2957900600DD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
